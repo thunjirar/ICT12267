@@ -1,0 +1,253 @@
+/* ===== ฟอนต์ ===== */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+
+/* ===== พื้นฐาน ===== */
+body{
+  margin:0;
+  font-family:'Kanit',sans-serif;
+  background:linear-gradient(135deg,#ffd6ec,#e0f7ff);
+}
+
+/* ===== Dark Mode ===== */
+#darkToggle{display:none;}
+
+.dark-label{
+  cursor:pointer;
+  background:#ff66a3;
+  color:#fff;
+  padding:6px 14px;
+  border-radius:20px;
+  position:fixed;
+  top:15px;
+  right:20px;
+  z-index:1000;
+}
+
+#darkToggle:checked ~ .page{
+  background:#1a1a1a;
+  color:#f1f1f1;
+}
+
+#darkToggle:checked ~ .page nav{background:#2a2a2a;}
+#darkToggle:checked ~ .page .card{background:#2a2a2a;}
+#darkToggle:checked ~ .page .contact{background:#2a2a2a;}
+
+/* ===== Navbar ===== */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 40px;
+  background:#fff;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+  position:sticky;
+  top:0;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#ff66a3;
+  font-weight:500;
+}
+
+.logo img{width:45px;}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#555;
+}
+
+nav a:hover{
+  color:#ff66a3;
+}
+
+/* ===== Heading ===== */
+.heading{
+  text-align:center;
+  padding:30px 10px;
+}
+
+.heading h1{
+  color:#ff66a3;
+}
+
+/* ===== Gallery ===== */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  padding:0 40px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:15px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* ===== Modal ===== */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+
+.modal img{
+  max-width:90%;
+  border-radius:20px;
+}
+
+.modal:target{
+  display:flex;
+}
+
+/* ===== การ์ดสินค้า ===== */
+.products{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+  padding:40px;
+}
+
+.card{
+  background:#fff;
+  border-radius:20px;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  position:relative;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px) scale(1.02);
+}
+
+.card img{
+  width:100%;
+  border-radius:15px;
+}
+
+/* ===== ป้ายราคา ===== */
+.price{
+  position:absolute;
+  top:15px;
+  right:15px;
+  background:#ff66a3;
+  color:#fff;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:14px;
+}
+
+/* ===== ปุ่มวิ้ง ===== */
+.btn{
+  margin-top:10px;
+  background:linear-gradient(45deg,#ff9ecf,#ffd6ec);
+  border:none;
+  padding:10px 20px;
+  border-radius:30px;
+  color:#fff;
+  cursor:pointer;
+  box-shadow:0 0 10px #ffb3d9;
+  transition:.3s;
+}
+
+.btn:hover{
+  box-shadow:0 0 20px #ff66a3;
+}
+
+/* ===== ฟอร์มติดต่อ ===== */
+.contact{
+  background:#fff;
+  padding:40px;
+  margin:40px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact input,
+.contact textarea{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+/* ===== Footer ===== */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#fff;
+  margin-top:40px;
+}
+
+/* ===== ปุ่มแชทลอย ===== */
+.chat-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#ff66a3;
+  color:#fff;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:24px;
+  box-shadow:0 0 15px #ff66a3;
+}
+
+/* ===== หัวใจลอย ===== */
+.hearts{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.heart{
+  position:absolute;
+  bottom:-30px;
+  animation:floatUp linear infinite;
+  opacity:.9;
+}
+
+.heart:nth-child(1){left:5%; font-size:14px; animation-duration:6s;}
+.heart:nth-child(2){left:15%; font-size:20px; animation-duration:7s;}
+.heart:nth-child(3){left:25%; font-size:16px; animation-duration:5s;}
+.heart:nth-child(4){left:40%; font-size:22px; animation-duration:8s;}
+.heart:nth-child(5){left:55%; font-size:15px; animation-duration:6.5s;}
+.heart:nth-child(6){left:70%; font-size:18px; animation-duration:7.5s;}
+.heart:nth-child(7){left:82%; font-size:14px; animation-duration:5.5s;}
+.heart:nth-child(8){left:92%; font-size:19px; animation-duration:8.5s;}
+
+@keyframes floatUp{
+  0%{
+    transform:translateY(0) translateX(0) scale(1);
+    opacity:0;
+  }
+  20%{opacity:1;}
+  100%{
+    transform:translateY(-110vh) translateX(30px) scale(1.4);
+    opacity:0;
+  }
+}
