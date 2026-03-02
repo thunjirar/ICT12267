@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Thunjira Runegesa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🔝 HEADER -->
+<header class="header">
+    <h1>Thunjira runegesa</h1>
+    <nav>
+        <a href="#">หน้าแรก</a>
+        <a href="#">ข้อมูลบริษัท</a>
+        <a href="#">บริการ</a>
+        <a href="#">เกี่ยวกับเรา</a>
+    </nav>
+</header>
+
+<!-- 🎬 VIDEO BANNER -->
+<section class="video-banner">
+    <video id="myVideo" autoplay muted loop playsinline>
+        <source src="242945_small.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <div class="banner-text">
+        <h2>Thunjira Runegesa</h2>
+    </div>
+</section>
+
+<!-- 🎮 ปุ่มควบคุมวิดีโอ -->
+<div class="video-controls">
+    <button class="btn play" onclick="playVideo()">Play</button>
+    <button class="btn pause" onclick="pauseVideo()">Pause</button>
+</div>
+
+<!-- 💗 FORM -->
+<div class="form-container">
+    <h2>💗 แบบฟอร์มลงทะเบียน 💗</h2>
+
+    <form>
+        <label>ชื่อ-นามสกุล:</label>
+        <input type="text" placeholder="กรอกชื่อของคุณ">
+
+        <label>อีเมล:</label>
+        <input type="email" placeholder="example@email.com">
+
+        <label>รหัสผ่าน:</label>
+        <input type="password">
+
+        <label>เพศ:</label>
+        <div class="gender">
+            <label><input type="radio" name="gender"> ชาย</label>
+            <label><input type="radio" name="gender"> หญิง</label>
+        </div>
+
+        <label>ตำแหน่ง:</label>
+        <select>
+            <option>Please select a position</option>
+            <option>Programmer</option>
+            <option>Designer</option>
+            <option>Marketing</option>
+        </select>
+
+        <div class="form-buttons">
+            <button type="submit" class="submit">ลงทะเบียน</button>
+            <button type="reset" class="reset">ล้างข้อมูล</button>
+        </div>
+    </form>
+</div>
+
+<!-- 💗 หัวใจลอย -->
+<div class="hearts">
+    <span>💗</span>
+    <span>💖</span>
+    <span>💗</span>
+    <span>💖</span>
+    <span>💗</span>
+</div>
+
+<script>
+const video = document.getElementById("myVideo");
+function playVideo(){ video.play(); }
+function pauseVideo(){ video.pause(); }
+</script>
+
+</body>
+</html>
