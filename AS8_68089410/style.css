@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* ================= Banner ================= */
+
+.banner {
+    background-image: url("11.jpg");
+    background-size: cover;
+    background-position: center;
+
+    height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: rgb(22, 20, 20);
+}
+
+.banner-text {
+    background: rgba(245, 244, 244, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.banner h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.banner p {
+    font-size: 20px;
+}
+
+
+/* ================= Card ================= */
+
+.service-card {
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(209, 126, 17, 0.2);
+}
+
+
+/* ================= Footer ================= */
+
+.footer {
+    background-color: #3f3b3b;
+    color: rgb(255, 255, 255);
+    padding: 40px;
+}
+
+.footer a {
+    color: #3540da;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
